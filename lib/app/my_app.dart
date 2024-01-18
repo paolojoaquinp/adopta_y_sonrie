@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Adpota y Sonrie',
       initialRoute: prefs.deafultRoute,
+      debugShowCheckedModeBanner: false,
       routes: {
         '/filter-location': (context) => const LocationView(),
         '/filter-search': (context) => const SearchView(),
