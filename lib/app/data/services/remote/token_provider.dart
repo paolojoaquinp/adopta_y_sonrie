@@ -5,15 +5,18 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class TokenProvider {
   String? _token;
+  DateTime? _expiryTime;
   static const _tokenKey = 'token';
+  static const _expiryTimeKey = 'expiryTime';
 
   Future<String> getToken() async {
+    final prefs = await SharedPreferences.getInstance();
     if (_token == null) {
-      final prefs = await SharedPreferences.getInstance();
       _token = prefs.getString(_tokenKey);
-      if (_token == null || _token!.isEmpty) {
-        await _refreshToken();
-      }
+      _expiryTime = DateTime.tryParse(prefs.getString(_expiryTimeKey) ?? '');
+    }
+    if (_token == null || _expiryTime == null || DateTime.now().isAfter(_expiryTime!)) {
+      await _refreshToken();
     }
     return _token!;
   }
@@ -31,9 +34,10 @@ class TokenProvider {
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
       _token = data['access_token'];
+      _expiryTime = DateTime.now().add(Duration(seconds: data['expires_in']));
       final prefs = await SharedPreferences.getInstance();
-      prefs.setString(_tokenKey, '');
       prefs.setString(_tokenKey, _token!);
+      prefs.setString(_expiryTimeKey, _expiryTime!.toIso8601String());
     } else {
       throw Exception('Failed to refresh token');
     }

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../domain/repositories/animals_repository.dart';
-import 'widgets/error.dart';
-import 'widgets/loaded.dart';
+import 'widgets/home_error.dart';
+import 'widgets/home_loaded.dart';
 
 
 class HomeView extends StatefulWidget {
@@ -30,7 +30,7 @@ class _HomeViewState extends State<HomeView> with AutomaticKeepAliveClientMixin{
           child: bloc.state.map(
             loading: (_) => const Center(child: CircularProgressIndicator()),
             failed: (_) => const HomeError(),
-            loaded: (_) => const HomeLoaded()
+            loaded: (_) => const HomeLoaded(),
           ),
         );
       }

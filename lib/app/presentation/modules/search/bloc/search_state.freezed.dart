@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'home_state.dart';
+part of 'search_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,31 +15,35 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$HomeState {
+mixin _$SearchState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(HttpRequestFailure failure) failed,
-    required TResult Function(Animals animals) loaded,
+    required TResult Function(Animals animals, String? type) loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(HttpRequestFailure failure)? failed,
-    TResult? Function(Animals animals)? loaded,
+    TResult? Function(Animals animals, String? type)? loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(HttpRequestFailure failure)? failed,
-    TResult Function(Animals animals)? loaded,
+    TResult Function(Animals animals, String? type)? loaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Failed value) failed,
     required TResult Function(_Loaded value) loaded,
@@ -47,6 +51,7 @@ mixin _$HomeState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Failed value)? failed,
     TResult? Function(_Loaded value)? loaded,
@@ -54,6 +59,7 @@ mixin _$HomeState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Failed value)? failed,
     TResult Function(_Loaded value)? loaded,
@@ -63,20 +69,135 @@ mixin _$HomeState {
 }
 
 /// @nodoc
-abstract class $HomeStateCopyWith<$Res> {
-  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
-      _$HomeStateCopyWithImpl<$Res, HomeState>;
+abstract class $SearchStateCopyWith<$Res> {
+  factory $SearchStateCopyWith(
+          SearchState value, $Res Function(SearchState) then) =
+      _$SearchStateCopyWithImpl<$Res, SearchState>;
 }
 
 /// @nodoc
-class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
-    implements $HomeStateCopyWith<$Res> {
-  _$HomeStateCopyWithImpl(this._value, this._then);
+class _$SearchStateCopyWithImpl<$Res, $Val extends SearchState>
+    implements $SearchStateCopyWith<$Res> {
+  _$SearchStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$InitialImplCopyWith<$Res> {
+  factory _$$InitialImplCopyWith(
+          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
+      __$$InitialImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$InitialImplCopyWithImpl<$Res>
+    extends _$SearchStateCopyWithImpl<$Res, _$InitialImpl>
+    implements _$$InitialImplCopyWith<$Res> {
+  __$$InitialImplCopyWithImpl(
+      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$InitialImpl implements _Initial {
+  _$InitialImpl();
+
+  @override
+  String toString() {
+    return 'SearchState.initial()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InitialImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(HttpRequestFailure failure) failed,
+    required TResult Function(Animals animals, String? type) loaded,
+  }) {
+    return initial();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(HttpRequestFailure failure)? failed,
+    TResult? Function(Animals animals, String? type)? loaded,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(HttpRequestFailure failure)? failed,
+    TResult Function(Animals animals, String? type)? loaded,
+    required TResult orElse(),
+  }) {
+    if (initial != null) {
+      return initial();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Failed value) failed,
+    required TResult Function(_Loaded value) loaded,
+  }) {
+    return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Failed value)? failed,
+    TResult? Function(_Loaded value)? loaded,
+  }) {
+    return initial?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Failed value)? failed,
+    TResult Function(_Loaded value)? loaded,
+    required TResult orElse(),
+  }) {
+    if (initial != null) {
+      return initial(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Initial implements SearchState {
+  factory _Initial() = _$InitialImpl;
 }
 
 /// @nodoc
@@ -88,7 +209,7 @@ abstract class _$$LoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$LoadingImpl>
+    extends _$SearchStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
@@ -102,7 +223,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   String toString() {
-    return 'HomeState.loading()';
+    return 'SearchState.loading()';
   }
 
   @override
@@ -117,9 +238,10 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(HttpRequestFailure failure) failed,
-    required TResult Function(Animals animals) loaded,
+    required TResult Function(Animals animals, String? type) loaded,
   }) {
     return loading();
   }
@@ -127,9 +249,10 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(HttpRequestFailure failure)? failed,
-    TResult? Function(Animals animals)? loaded,
+    TResult? Function(Animals animals, String? type)? loaded,
   }) {
     return loading?.call();
   }
@@ -137,9 +260,10 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(HttpRequestFailure failure)? failed,
-    TResult Function(Animals animals)? loaded,
+    TResult Function(Animals animals, String? type)? loaded,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -151,6 +275,7 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Failed value) failed,
     required TResult Function(_Loaded value) loaded,
@@ -161,6 +286,7 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Failed value)? failed,
     TResult? Function(_Loaded value)? loaded,
@@ -171,6 +297,7 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Failed value)? failed,
     TResult Function(_Loaded value)? loaded,
@@ -183,7 +310,7 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements HomeState {
+abstract class _Loading implements SearchState {
   factory _Loading() = _$LoadingImpl;
 }
 
@@ -200,7 +327,7 @@ abstract class _$$FailedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$FailedImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$FailedImpl>
+    extends _$SearchStateCopyWithImpl<$Res, _$FailedImpl>
     implements _$$FailedImplCopyWith<$Res> {
   __$$FailedImplCopyWithImpl(
       _$FailedImpl _value, $Res Function(_$FailedImpl) _then)
@@ -238,7 +365,7 @@ class _$FailedImpl implements _Failed {
 
   @override
   String toString() {
-    return 'HomeState.failed(failure: $failure)';
+    return 'SearchState.failed(failure: $failure)';
   }
 
   @override
@@ -261,9 +388,10 @@ class _$FailedImpl implements _Failed {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(HttpRequestFailure failure) failed,
-    required TResult Function(Animals animals) loaded,
+    required TResult Function(Animals animals, String? type) loaded,
   }) {
     return failed(failure);
   }
@@ -271,9 +399,10 @@ class _$FailedImpl implements _Failed {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(HttpRequestFailure failure)? failed,
-    TResult? Function(Animals animals)? loaded,
+    TResult? Function(Animals animals, String? type)? loaded,
   }) {
     return failed?.call(failure);
   }
@@ -281,9 +410,10 @@ class _$FailedImpl implements _Failed {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(HttpRequestFailure failure)? failed,
-    TResult Function(Animals animals)? loaded,
+    TResult Function(Animals animals, String? type)? loaded,
     required TResult orElse(),
   }) {
     if (failed != null) {
@@ -295,6 +425,7 @@ class _$FailedImpl implements _Failed {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Failed value) failed,
     required TResult Function(_Loaded value) loaded,
@@ -305,6 +436,7 @@ class _$FailedImpl implements _Failed {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Failed value)? failed,
     TResult? Function(_Loaded value)? loaded,
@@ -315,6 +447,7 @@ class _$FailedImpl implements _Failed {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Failed value)? failed,
     TResult Function(_Loaded value)? loaded,
@@ -327,7 +460,7 @@ class _$FailedImpl implements _Failed {
   }
 }
 
-abstract class _Failed implements HomeState {
+abstract class _Failed implements SearchState {
   factory _Failed(final HttpRequestFailure failure) = _$FailedImpl;
 
   HttpRequestFailure get failure;
@@ -342,14 +475,14 @@ abstract class _$$LoadedImplCopyWith<$Res> {
           _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
       __$$LoadedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({Animals animals});
+  $Res call({Animals animals, String? type});
 
   $AnimalsCopyWith<$Res> get animals;
 }
 
 /// @nodoc
 class __$$LoadedImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$LoadedImpl>
+    extends _$SearchStateCopyWithImpl<$Res, _$LoadedImpl>
     implements _$$LoadedImplCopyWith<$Res> {
   __$$LoadedImplCopyWithImpl(
       _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
@@ -359,12 +492,17 @@ class __$$LoadedImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? animals = null,
+    Object? type = freezed,
   }) {
     return _then(_$LoadedImpl(
       animals: null == animals
           ? _value.animals
           : animals // ignore: cast_nullable_to_non_nullable
               as Animals,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 
@@ -380,14 +518,16 @@ class __$$LoadedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoadedImpl implements _Loaded {
-  _$LoadedImpl({required this.animals});
+  _$LoadedImpl({required this.animals, this.type});
 
   @override
   final Animals animals;
+  @override
+  final String? type;
 
   @override
   String toString() {
-    return 'HomeState.loaded(animals: $animals)';
+    return 'SearchState.loaded(animals: $animals, type: $type)';
   }
 
   @override
@@ -395,11 +535,12 @@ class _$LoadedImpl implements _Loaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoadedImpl &&
-            (identical(other.animals, animals) || other.animals == animals));
+            (identical(other.animals, animals) || other.animals == animals) &&
+            (identical(other.type, type) || other.type == type));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, animals);
+  int get hashCode => Object.hash(runtimeType, animals, type);
 
   @JsonKey(ignore: true)
   @override
@@ -410,33 +551,36 @@ class _$LoadedImpl implements _Loaded {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(HttpRequestFailure failure) failed,
-    required TResult Function(Animals animals) loaded,
+    required TResult Function(Animals animals, String? type) loaded,
   }) {
-    return loaded(animals);
+    return loaded(animals, type);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(HttpRequestFailure failure)? failed,
-    TResult? Function(Animals animals)? loaded,
+    TResult? Function(Animals animals, String? type)? loaded,
   }) {
-    return loaded?.call(animals);
+    return loaded?.call(animals, type);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(HttpRequestFailure failure)? failed,
-    TResult Function(Animals animals)? loaded,
+    TResult Function(Animals animals, String? type)? loaded,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(animals);
+      return loaded(animals, type);
     }
     return orElse();
   }
@@ -444,6 +588,7 @@ class _$LoadedImpl implements _Loaded {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Failed value) failed,
     required TResult Function(_Loaded value) loaded,
@@ -454,6 +599,7 @@ class _$LoadedImpl implements _Loaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Failed value)? failed,
     TResult? Function(_Loaded value)? loaded,
@@ -464,6 +610,7 @@ class _$LoadedImpl implements _Loaded {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Failed value)? failed,
     TResult Function(_Loaded value)? loaded,
@@ -476,10 +623,12 @@ class _$LoadedImpl implements _Loaded {
   }
 }
 
-abstract class _Loaded implements HomeState {
-  factory _Loaded({required final Animals animals}) = _$LoadedImpl;
+abstract class _Loaded implements SearchState {
+  factory _Loaded({required final Animals animals, final String? type}) =
+      _$LoadedImpl;
 
   Animals get animals;
+  String? get type;
   @JsonKey(ignore: true)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;

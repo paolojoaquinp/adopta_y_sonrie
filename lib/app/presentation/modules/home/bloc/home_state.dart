@@ -10,6 +10,6 @@ class HomeState with _$HomeState {
   factory HomeState.loading() = _Loading;
   factory HomeState.failed(HttpRequestFailure failure) = _Failed;
   factory HomeState.loaded({
-    required List<Animal> animals,
+    required Animals animals,
   }) = _Loaded; 
 }

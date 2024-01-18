@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "710630722653",
+    "project_id": "adopta-y-sonrie",
+    "storage_bucket": "adopta-y-sonrie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710630722653:android:21fb0f6496f286697411b4",
+        "android_client_info": {
+          "package_name": "com.example.adopta_y_sonrie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTqS7px9jgPZrHZPKIkot_B9OI7zH9jvQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

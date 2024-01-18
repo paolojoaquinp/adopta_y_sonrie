@@ -9,5 +9,8 @@ import '../either/either.dart';
 typedef GetAnimalsFuture = Future<Either<HttpRequestFailure,Animals>>;
 
 abstract class AnimalsRepository {
-  GetAnimalsFuture getAnimals(String type, int page);
+  GetAnimalsFuture getAnimals();
+  GetAnimalsFuture getAnimalsNext(String? page);
+  GetAnimalsFuture getAnimalsByType(String type, int page);
+  GetAnimalsFuture getAnimalsNextByType(String type, String page);
 }

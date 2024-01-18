@@ -20,7 +20,7 @@ class HomeBloc extends ChangeNotifier {
         notifyListeners();
       },
     );
-    final result = await animalsRepository.getAnimals('dog', 2);
+    final result = await animalsRepository.getAnimals();
 
     // 1
     result.when(left: (failure) {
@@ -31,4 +31,20 @@ class HomeBloc extends ChangeNotifier {
     notifyListeners();
   }
 
+  Future<void> loadNextPage(String url) async {
+    _state = HomeState.loading();
+    notifyListeners();
+
+
+    final result = await animalsRepository.getAnimalsNext(url);
+    result.when(
+      left: (failure) {
+        _state = HomeState.failed(failure);
+      },
+      right: (animals) {
+        _state = HomeState.loaded(animals: animals);
+      },
+    );
+    notifyListeners();
+  }
 }
